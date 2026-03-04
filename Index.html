@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cargando...</title>
+</head>
+<body style="margin:0; height:100vh; display:flex; align-items:center; justify-content:center;">
+
+    <div id="pantalla" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+        <h1>TOCA PARA CONTINUAR</h1>
+    </div>
+
+    <audio id="miAudio" src="sonido-de-gemidos-broma-made-with-Voicemod.mp3"></audio>
+
+    <script>
+        const boton = document.getElementById('pantalla');
+        const audio = document.getElementById('miAudio');
+
+        boton.addEventListener('click', () => {
+            audio.volume = 1.0;
+            audio.play();
+            boton.innerHTML = "<h1>ERROR DE RED...</h1>";
+        });
+    </script>
+
+</body>
+</html>
